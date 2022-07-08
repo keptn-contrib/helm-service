@@ -7,6 +7,7 @@ jobs:
     steps:
       - name: Check out code.
         uses: actions/checkout@v3.0.2
+
       - name: Set up Go
         uses: actions/setup-go@v3.2.0
         with:
@@ -14,7 +15,7 @@ jobs:
         id: go
       - name: Install linters
         run: "( mkdir linters && cd linters && go get golang.org/x/lint/golint )"
-      - uses: reviewdog/action-setup@v1.0.3
+      - uses: reviewdog/action-setup@v1
         with:
           reviewdog_version: latest
       - name: Run reviewdog
