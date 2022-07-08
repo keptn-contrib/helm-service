@@ -1,6 +1,10 @@
 # Helm Service
 
-The *helm-service* allows deploying services to a Kubernetes cluster and releasing them to user traffic.
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/keptn-contrib/helm-service)
+[![Go Report Card](https://goreportcard.com/badge/github.com/keptn-contrib/helm-service)](https://goreportcard.com/report/github.com/keptn-contrib/helm-service)
+
+
+The *helm-service* allows deploying services to a Kubernetes cluster and releasing them to user traffic using Istio.
 Therefore, these services have to be packed as [Helm charts](https://helm.sh/docs/topics/charts/).
 For details about the Helm chart and how to onboard a service, please checkout the [docs](https://keptn.sh/docs/0.15.x/manage/service/#onboard-a-service).
 
@@ -14,15 +18,34 @@ either promotes or rolls back the new version depending on the (evaluation) resu
 
 The *helm-service* is part of the *Execution Plane for Continuous Delivery*.
 
-You can find installation instructions [here](https://keptn.sh/docs/0.15.x/operate/install/#install-keptn).
-
-To install it next to your Keptn installation, you can use the following command:
+To install it next to your Keptn control-plane installation, you can use the following command:
 
 ```console
-helm install helm-service https://github.com/keptn/keptn/releases/download/<latest>/helm-service-<latest>.tgz -n keptn
+HELM_SERVICE_VERSION=1.0.0
+HELM_SERVICE_NAMESPACE=keptn
+
+helm upgrade --install -n ${HELM_SERVICE_NAMESPACE} helm-service \
+  https://github.com/keptn-contrib/helm-service/releases/download/${HELM_SERVICE_VERSION}/helm-service-${HELM_SERVICE_VERSION}.tgz
 ```
 
-Replace `<latest>` with a Keptn version available from the [release list](https://github.com/keptn/keptn/tags).
+### Istio
+
+In order for blue-green and direct deployments to work properly, helm-service requires Istio installed on your Kubernetes cluster.
+
+Please follow the [Official Istio Getting Started Guide](https://istio.io/latest/docs/setup/getting-started/), or alternatively execute the following commands:
+
+```bash
+curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.14.1 sh -
+./istio-1.14.1/bin/istioctl install
+```
+
+## Usage
+
+Please read up about multi-stage delivery within the Keptn docs, e.g.:
+
+* [Multi stage delivery](https://keptn.sh/docs/0.17.x/continuous_delivery/multi_stage/)
+* [Deployment using helm](https://keptn.sh/docs/0.17.x/continuous_delivery/deployment_helm/)
+
 
 ## Development
 
