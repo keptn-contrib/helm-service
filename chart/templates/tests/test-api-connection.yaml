@@ -3,8 +3,8 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: "{{ include "helm-service.fullname" . }}-test-api-connection"
-  labels: {{- include "keptn.common.labels.standard" . | nindent 4 }}
-    app.kubernetes.io/name: {{ include "helm-service.name" . }}
+  labels:
+  {{- include "helm-service.labels" . | nindent 4 }}
   annotations:
     "helm.sh/hook": test
 spec:
@@ -13,11 +13,7 @@ spec:
       image: busybox
       args:
         - wget
-        {{- if not .Values.remoteControlPlane.api.tokenSecretName }}
         - '--header=x-token: {{ .Values.remoteControlPlane.api.token }}'
-        {{- else }}
-        - '--header=x-token: {{ index (lookup "v1" "Secret" .Release.Namespace "keptn-api-token").data "keptn-api-token" }}'
-        {{- end }}
         - {{ .Values.remoteControlPlane.api.protocol }}://{{ .Values.remoteControlPlane.api.hostname }}/api/v1/metadata
   restartPolicy: Never
   {{- end -}}
