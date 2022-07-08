@@ -3,9 +3,9 @@ package configurationchanger
 import (
 	keptnv2 "github.com/keptn/go-utils/pkg/lib/v0_2_0"
 
+	"github.com/keptn-contrib/helm-service/pkg/common"
+	"github.com/keptn-contrib/helm-service/pkg/helm"
 	goutils "github.com/keptn/go-utils/pkg/api/utils"
-	"github.com/keptn/keptn/helm-service/pkg/common"
-	"github.com/keptn/keptn/helm-service/pkg/helm"
 	"helm.sh/helm/v3/pkg/chart"
 )
 

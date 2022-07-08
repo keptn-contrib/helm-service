@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/keptn/keptn/helm-service/controller"
-	"github.com/keptn/keptn/helm-service/pkg/common"
-	"github.com/keptn/keptn/helm-service/pkg/configurationchanger"
-	"github.com/keptn/keptn/helm-service/pkg/helm"
+	"github.com/keptn-contrib/helm-service/controller"
+	"github.com/keptn-contrib/helm-service/pkg/common"
+	"github.com/keptn-contrib/helm-service/pkg/configurationchanger"
+	"github.com/keptn-contrib/helm-service/pkg/helm"
 
 	"net/url"
 	"os/signal"
@@ -22,7 +22,7 @@ import (
 
 	"github.com/keptn/go-utils/pkg/common/kubeutils"
 
-	"github.com/keptn/keptn/helm-service/pkg/namespacemanager"
+	"github.com/keptn-contrib/helm-service/pkg/namespacemanager"
 
 	cloudevents "github.com/cloudevents/sdk-go/v2"
 	"github.com/kelseyhightower/envconfig"
@@ -31,9 +31,9 @@ import (
 	keptncommon "github.com/keptn/go-utils/pkg/lib/keptn"
 	keptnv2 "github.com/keptn/go-utils/pkg/lib/v0_2_0"
 
+	"github.com/keptn-contrib/helm-service/pkg/mesh"
+	"github.com/keptn-contrib/helm-service/pkg/serviceutils"
 	utils "github.com/keptn/go-utils/pkg/api/utils"
-	"github.com/keptn/keptn/helm-service/pkg/mesh"
-	"github.com/keptn/keptn/helm-service/pkg/serviceutils"
 	authorizationv1 "k8s.io/api/authorization/v1"
 )
 
