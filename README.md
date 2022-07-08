@@ -66,3 +66,7 @@ For a b/g deployment with an (evaluation) result equals fail, the `helm-service`
 The `sh.keptn.event.action.triggered` event stats that a remediation action has been triggered.
 The `helm-service` provides a replica scaling remediation action.
 ![](./sequence_diagrams/action-triggered.png)
+
+## License
+
+Please find more information in the [LICENSE](LICENSE) file.
