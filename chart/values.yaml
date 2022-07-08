@@ -2,7 +2,7 @@ nameOverride:
 
 helmservice:
   image:
-    repository: docker.io/keptn/helm-service # Container Image Name
+    repository: ghcr.io/keptn-contrib/helm-service # Container Image Name
     pullPolicy: IfNotPresent                 # Kubernetes Image Pull Policy
     tag: ""                                  # Container Tag
   service:
@@ -24,7 +24,7 @@ distributor:
   image:
     repository: docker.io/keptn/distributor  # Container Image Name
     pullPolicy: IfNotPresent                 # Kubernetes Image Pull Policy
-    tag: ""                                  # Container Tag
+    tag: "0.16.1"                            # Container Tag
   config:
     queueGroup:
       enabled: true                          # Enable connection via Nats queue group to support exactly-once message processing
