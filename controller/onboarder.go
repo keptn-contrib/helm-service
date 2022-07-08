@@ -3,16 +3,16 @@ package controller
 import (
 	"fmt"
 
+	"github.com/keptn-contrib/helm-service/pkg/common"
+	"github.com/keptn-contrib/helm-service/pkg/namespacemanager"
+	"github.com/keptn-contrib/helm-service/pkg/types"
 	keptnv2 "github.com/keptn/go-utils/pkg/lib/v0_2_0"
-	"github.com/keptn/keptn/helm-service/pkg/common"
-	"github.com/keptn/keptn/helm-service/pkg/namespacemanager"
-	"github.com/keptn/keptn/helm-service/pkg/types"
 
 	"helm.sh/helm/v3/pkg/chart"
 
 	keptnevents "github.com/keptn/go-utils/pkg/lib"
 
-	"github.com/keptn/keptn/helm-service/pkg/helm"
+	"github.com/keptn-contrib/helm-service/pkg/helm"
 )
 
 // Onboarder is responsible for onboarding a service

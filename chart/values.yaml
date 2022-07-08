@@ -1,21 +1,17 @@
-nameOverride:
+image:
+  repository: ghcr.io/keptn-contrib/helm-service # Container Image Name
+  pullPolicy: IfNotPresent                 # Kubernetes Image Pull Policy
+  tag: ""                                  # Container Tag
+service:
+  enabled: true                            # Creates a Kubernetes Service for the helm-service
 
-helmservice:
-  image:
-    repository: docker.io/keptn/helm-service # Container Image Name
-    pullPolicy: IfNotPresent                 # Kubernetes Image Pull Policy
-    tag: ""                                  # Container Tag
-  service:
-    enabled: true                            # Creates a Kubernetes Service for the helm-service
-  gracePeriod: 60
-  preStopHookTime: 5
-  resources:                                 # Resource limits and requests
-    limits:
-      cpu: "1000m"
-      memory: "512Mi"
-    requests:
-      cpu: "50m"
-      memory: "128Mi"
+resources:                                 # Resource limits and requests
+  limits:
+    cpu: "1000m"
+    memory: "512Mi"
+  requests:
+    cpu: "50m"
+    memory: "128Mi"
 
 distributor:
   stageFilter: ""                            # Stage to which this helm service belongs; default=all; comma-separated list to filter for set of stages
@@ -24,7 +20,7 @@ distributor:
   image:
     repository: docker.io/keptn/distributor  # Container Image Name
     pullPolicy: IfNotPresent                 # Kubernetes Image Pull Policy
-    tag: ""                                  # Container Tag
+    tag: "0.16.1"                            # Container Tag
   config:
     queueGroup:
       enabled: true                          # Enable connection via Nats queue group to support exactly-once message processing

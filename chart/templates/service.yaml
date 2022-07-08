@@ -1,15 +1,15 @@
-{{- if .Values.helmservice.service.enabled -}}
+{{- if .Values.service.enabled -}}
 apiVersion: v1
 kind: Service
 metadata:
   name: {{ include "helm-service.fullname" . }}
-  labels: {{- include "keptn.common.labels.standard" . | nindent 4 }}
-    app.kubernetes.io/name: {{ include "helm-service.name" . }}
+  labels:
+    {{- include "helm-service.labels" . | nindent 4 }}
 spec:
   type: ClusterIP
   ports:
     - port: 8080
       protocol: TCP
-  selector: {{- include "keptn.common.labels.selectorLabels" . | nindent 4 }}
-    app.kubernetes.io/name: {{ include "helm-service.name" . }}
+  selector:
+    {{- include "helm-service.selectorLabels" . | nindent 4 }}
   {{- end }}

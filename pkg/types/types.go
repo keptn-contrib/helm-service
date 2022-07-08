@@ -1,9 +1,9 @@
 package types
 
 import (
+	"github.com/keptn-contrib/helm-service/pkg/common"
 	"github.com/keptn/go-utils/pkg/api/models"
 	utils "github.com/keptn/go-utils/pkg/api/utils"
-	"github.com/keptn/keptn/helm-service/pkg/common"
 	"helm.sh/helm/v3/pkg/chart"
 )
 

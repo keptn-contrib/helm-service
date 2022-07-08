@@ -9,8 +9,8 @@ import (
 
 	keptnv2 "github.com/keptn/go-utils/pkg/lib/v0_2_0"
 
+	"github.com/keptn-contrib/helm-service/pkg/mesh"
 	keptnevents "github.com/keptn/go-utils/pkg/lib"
-	"github.com/keptn/keptn/helm-service/pkg/mesh"
 	"helm.sh/helm/v3/pkg/chart"
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"

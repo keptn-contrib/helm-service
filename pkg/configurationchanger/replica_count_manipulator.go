@@ -6,7 +6,7 @@ import (
 	"io"
 
 	"github.com/ghodss/yaml"
-	"github.com/keptn/keptn/helm-service/pkg/common"
+	"github.com/keptn-contrib/helm-service/pkg/common"
 	"helm.sh/helm/v3/pkg/chart"
 	appsv1 "k8s.io/api/apps/v1"
 	kyaml "k8s.io/apimachinery/pkg/util/yaml"

@@ -10,7 +10,7 @@ import (
 
 	"github.com/golang/mock/mockgen/model"
 
-	pkg_ "github.com/keptn/keptn/helm-service/pkg/helm"
+	pkg_ "github.com/keptn-contrib/helm-service/pkg/helm"
 )
 
 var output = flag.String("output", "", "The output file name, or empty to use stdout.")
@@ -29,7 +29,7 @@ func main() {
 		// NOTE: This behaves contrary to documented behaviour if the
 		// package name is not the final component of the import path.
 		// The reflect package doesn't expose the package name, though.
-		Name: path.Base("github.com/keptn/keptn/helm-service/pkg/helm"),
+		Name: path.Base("github.com/keptn-contrib/helm-service/pkg/helm"),
 	}
 
 	for _, it := range its {

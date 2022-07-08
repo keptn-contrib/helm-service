@@ -3,10 +3,10 @@ package controller
 import (
 	"fmt"
 	cloudevents "github.com/cloudevents/sdk-go/v2"
+	"github.com/keptn-contrib/helm-service/pkg/configurationchanger"
+	"github.com/keptn-contrib/helm-service/pkg/mesh"
 	keptnevents "github.com/keptn/go-utils/pkg/lib"
 	keptnv2 "github.com/keptn/go-utils/pkg/lib/v0_2_0"
-	"github.com/keptn/keptn/helm-service/pkg/configurationchanger"
-	"github.com/keptn/keptn/helm-service/pkg/mesh"
 )
 
 type RollbackHandler struct {

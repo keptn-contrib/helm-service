@@ -9,7 +9,7 @@ import (
 
 	"helm.sh/helm/v3/pkg/chart"
 
-	"github.com/keptn/keptn/helm-service/pkg/objectutils"
+	"github.com/keptn-contrib/helm-service/pkg/objectutils"
 	"github.com/kinbiko/jsonassert"
 	"github.com/stretchr/testify/assert"
 	kyaml "k8s.io/apimachinery/pkg/util/yaml"

@@ -22,3 +22,5 @@ helm-service
 
 chart/charts/*.tgz
 chart/Chart.lock
+
+.idea/

@@ -3,7 +3,7 @@
 # https://hub.docker.com/_/golang
 FROM golang:1.18.3-alpine3.16 as builder-base
 
-WORKDIR /go/src/github.com/keptn/keptn/helm-service
+WORKDIR /go/src/github.com/keptn-contrib/helm-service
 
 # Force the go compiler to use modules 
 ENV GO111MODULE=on
@@ -41,7 +41,7 @@ RUN GOOS=linux go build -ldflags '-linkmode=external' -gcflags="${SKAFFOLD_GO_GC
 # https://docs.docker.com/develop/develop-images/multistage-build/#use-multi-stage-builds
 FROM alpine:3.16 as production
 ARG version=develop
-LABEL org.opencontainers.image.source="https://github.com/keptn/keptn" \
+LABEL org.opencontainers.image.source="https://github.com/keptn-contrib/helm-service" \
     org.opencontainers.image.url="https://keptn.sh" \
     org.opencontainers.image.title="Keptn Helm Service" \
     org.opencontainers.image.vendor="Keptn" \
@@ -53,7 +53,7 @@ LABEL org.opencontainers.image.source="https://github.com/keptn/keptn" \
 RUN apk add --no-cache ca-certificates libc6-compat
 
 # Copy the binary to the production image from the builder stage.
-COPY --from=builder /go/src/github.com/keptn/keptn/helm-service/helm-service /helm-service
+COPY --from=builder /go/src/github.com/keptn-contrib/helm-service/helm-service /helm-service
 
 EXPOSE 8080
 

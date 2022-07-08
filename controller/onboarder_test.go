@@ -7,11 +7,11 @@ import (
 	cloudevents "github.com/cloudevents/sdk-go/v2"
 	"github.com/cloudevents/sdk-go/v2/event"
 	"github.com/golang/mock/gomock"
+	"github.com/keptn-contrib/helm-service/mocks"
+	"github.com/keptn-contrib/helm-service/pkg/common"
 	keptnevents "github.com/keptn/go-utils/pkg/lib"
 	keptncommon "github.com/keptn/go-utils/pkg/lib/keptn"
 	keptnv2 "github.com/keptn/go-utils/pkg/lib/v0_2_0"
-	"github.com/keptn/keptn/helm-service/mocks"
-	"github.com/keptn/keptn/helm-service/pkg/common"
 	"github.com/stretchr/testify/assert"
 	"helm.sh/helm/v3/pkg/chart"
 )
@@ -25,12 +25,12 @@ import (
 //	"github.com/golang/mock/gomock"
 //	keptnevents "github.com/keptn/go-utils/pkg/lib"
 //	keptncommon "github.com/keptn/go-utils/pkg/lib/keptn"
-//	"github.com/keptn/keptn/helm-service/mocks"
+//	"github.com/keptn-contrib/helm-service/mocks"
 //	"github.com/stretchr/testify/assert"
 //	"helm.sh/helm/v3/pkg/chart"
 //	"testing"
 //
-//	"github.com/keptn/keptn/helm-service/pkg/helm"
+//	"github.com/keptn-contrib/helm-service/pkg/helm"
 //
 //	keptnv2 "github.com/keptn/go-utils/pkg/lib/v0_2_0"
 //

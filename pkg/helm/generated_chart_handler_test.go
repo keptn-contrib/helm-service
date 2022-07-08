@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/keptn/keptn/helm-service/pkg/mesh"
+	"github.com/keptn-contrib/helm-service/pkg/mesh"
 	"github.com/stretchr/testify/assert"
 
 	"sigs.k8s.io/yaml"

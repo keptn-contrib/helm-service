@@ -3,7 +3,7 @@ package mesh
 import (
 	"testing"
 
-	"github.com/keptn/keptn/helm-service/pkg/objectutils"
+	"github.com/keptn-contrib/helm-service/pkg/objectutils"
 	"github.com/kinbiko/jsonassert"
 )
 
