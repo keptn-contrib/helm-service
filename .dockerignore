@@ -5,3 +5,11 @@ deploy/
 Dockerfile
 chart/
 skaffold.yaml
+.github
+installer
+.reviewdog.yaml
+.versionrc.json
+renovate.json
+.ci_env
+sequence_diagrams/
+example-events/
