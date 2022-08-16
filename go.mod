@@ -1,4 +1,4 @@
-module github.com/keptn/keptn/helm-service
+module github.com/keptn-contrib/helm-service
 
 go 1.17
 

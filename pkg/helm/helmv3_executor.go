@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/keptn/keptn/helm-service/pkg/namespacemanager"
+	"github.com/keptn-contrib/helm-service/pkg/namespacemanager"
 	appsv1 "k8s.io/api/apps/v1"
 	"k8s.io/client-go/kubernetes"
 

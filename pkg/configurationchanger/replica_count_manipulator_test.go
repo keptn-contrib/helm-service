@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/keptn/keptn/helm-service/pkg/helm"
+	"github.com/keptn-contrib/helm-service/pkg/helm"
 	"helm.sh/helm/v3/pkg/chart"
 )
 

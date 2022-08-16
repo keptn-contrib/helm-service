@@ -2,8 +2,9 @@ package controller
 
 import (
 	"fmt"
+
+	"github.com/keptn-contrib/helm-service/pkg/types"
 	keptnv2 "github.com/keptn/go-utils/pkg/lib/v0_2_0"
-	"github.com/keptn/keptn/helm-service/pkg/types"
 
 	cloudevents "github.com/cloudevents/sdk-go/v2"
 )

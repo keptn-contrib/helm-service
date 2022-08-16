@@ -2,14 +2,15 @@ package controller
 
 import (
 	"errors"
+	"testing"
+
 	cloudevents "github.com/cloudevents/sdk-go/v2"
 	"github.com/golang/mock/gomock"
+	"github.com/keptn-contrib/helm-service/mocks"
+	"github.com/keptn-contrib/helm-service/pkg/helm"
 	keptn "github.com/keptn/go-utils/pkg/lib"
 	"github.com/keptn/go-utils/pkg/lib/v0_2_0"
-	"github.com/keptn/keptn/helm-service/mocks"
-	"github.com/keptn/keptn/helm-service/pkg/helm"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func TestCreateRollbackHandler(t *testing.T) {

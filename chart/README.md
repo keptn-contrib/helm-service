@@ -10,8 +10,6 @@ The following table lists the configurable parameters of the Helm-service chart 
 | Parameter                               | Description                                                       | Default                                         |
 |-----------------------------------------|-------------------------------------------------------------------|-------------------------------------------------|
 | `nameOverride`                          | Override the name label and distributor subscription name         | `""`                                            |
-| `global.keptn.registry`                 | Container repository/registry name. Will be set for all services. | `"docker.io/keptn/"`                            |
-| `global.keptn.tag`                      | Container tag. Will be set for all services.                      | `""`                                            |
 | `helmservice.image.registry`            | Container image name                                              | `"${global.keptn.image.registry}/helm-service"` |
 | `helmservice.image.pullPolicy`          | Kubernetes image pull policy                                      | `"IfNotPresent"`                                |
 | `helmservice.image.tag`                 | Container tag                                                     | `global.keptn.image.tag`                        |
@@ -38,8 +36,3 @@ The following table lists the configurable parameters of the Helm-service chart 
 | `nodeSelector`                          | Node selector configuration                                       | `{}`                                            |
 | `tolerations`                           | Tolerations for the pods                                          | `[]`                                            |
 | `affinity`                              | Affinity rules                                                    | `{}`                                            |
-
-
-
-
-
