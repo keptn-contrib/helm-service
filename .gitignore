@@ -17,6 +17,5 @@ MANIFEST
 vendor/*
 .DS_Store
 
-#binary - go build
-helm-service
-
+# Build charts
+helm-service*.tgz
