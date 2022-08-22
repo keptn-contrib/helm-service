@@ -13,3 +13,4 @@ renovate.json
 .ci_env
 sequence_diagrams/
 example-events/
+.vscode
