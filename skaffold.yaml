@@ -4,7 +4,7 @@ build:
   local:
     useBuildkit: true
   artifacts:
-    - image: keptndev/helm-service
+    - image: ghcr.io/keptn-contrib/helm-service
       docker:
         dockerfile: Dockerfile
         target: production
@@ -20,9 +20,8 @@ deploy:
         # upgradeOnChange: true
         # recreatePods: false # don't recreate all pods
         artifactOverrides:
-          image: keptndev/helm-service
-        overrides:
-          distributor:
-            image:
-              tag: 0.13.0-dev
+          helmservice:
+            image: ghcr.io/keptn-contrib/helm-service
+        imageStrategy:
+          helm: { }
         chartPath: chart

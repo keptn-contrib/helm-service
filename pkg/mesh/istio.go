@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/keptn/keptn/helm-service/pkg/apis/networking/istio/v1alpha3"
+	"github.com/keptn-contrib/helm-service/pkg/apis/networking/istio/v1alpha3"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"sigs.k8s.io/yaml"
 )

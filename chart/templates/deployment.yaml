@@ -2,21 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "helm-service.fullname" . }}
-  labels: {{- include "keptn.common.labels.standard" . | nindent 4 }}
-    app.kubernetes.io/name: {{ include "helm-service.name" . }}
+  labels: 
+    {{- include "helm-service.labels" . | nindent 4 }}
 spec:
   replicas: 1
   selector:
-    matchLabels: {{- include "keptn.common.labels.selectorLabels" . | nindent 6 }}
-      app.kubernetes.io/name: {{ include "helm-service.name" . }}
+    matchLabels: 
+      {{- include "helm-service.labels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
       annotations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      labels: {{- include "keptn.common.labels.standard" . | nindent 8 }}
-        app.kubernetes.io/name: {{ include "helm-service.name" . }}
+      labels:
+        {{- include "helm-service.labels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
@@ -29,7 +29,7 @@ spec:
         - name: helm-service
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: {{ include "keptn.common.images.image" ( dict "imageRoot" .Values.helmservice.image "global" .Values.global.keptn "defaultTag" .Chart.AppVersion) | quote }}
+          image: "{{ .Values.helmservice.image.repository }}:{{ .Values.helmservice.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.helmservice.image.pullPolicy }}
           ports:
             - containerPort: 80
@@ -89,7 +89,7 @@ spec:
           resources:
             {{- toYaml .Values.helmservice.resources | nindent 12 }}
         - name: distributor
-          image: {{ include "keptn.common.images.image" ( dict "imageRoot" .Values.distributor.image "global" .Values.global.keptn "defaultTag" .Chart.AppVersion) | quote }}
+          image: "{{ .Values.distributor.image.repository }}:{{ .Values.distributor.image.tag | default .Chart.AppVersion }}" 
           {{- include "helm-service.prestop" . | nindent 10 }}
           livenessProbe:
             httpGet:
@@ -124,7 +124,7 @@ spec:
                 fieldRef:
                   fieldPath: metadata.labels['app.kubernetes.io/version']
             - name: DISTRIBUTOR_VERSION
-              value: {{ include "keptn.common.images.tag" ( dict "imageRoot" .Values.distributor.image "global" .Values.global.keptn "defaultTag" .Chart.AppVersion) | quote }}
+              value: "{{ .Values.distributor.image.tag | default .Chart.AppVersion }}"
             - name: LOCATION
               valueFrom:
                 fieldRef:

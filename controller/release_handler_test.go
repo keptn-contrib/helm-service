@@ -1,14 +1,15 @@
 package controller
 
 import (
+	"testing"
+
 	cloudevents "github.com/cloudevents/sdk-go/v2"
 	"github.com/golang/mock/gomock"
+	"github.com/keptn-contrib/helm-service/mocks"
 	keptnevents "github.com/keptn/go-utils/pkg/lib"
 	. "github.com/keptn/go-utils/pkg/lib/v0_2_0"
-	"github.com/keptn/keptn/helm-service/mocks"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 func TestHandleReleaseTriggeredEvent_WhenDeploymentStrategyDirect_ThenNoActionRequired(t *testing.T) {

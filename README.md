@@ -10,6 +10,13 @@ Helm upgrade on the Helm chart provided by the user. Furthermore, the `helm-serv
 1. Release task: Here, the `helm-service`
 either promotes or rolls back the new version depending on the (evaluation) result.
 
+## Compatibility Matrix
+
+| Keptn Version | [Helm-service Docker Image](https://github.com/keptn-contrib/helm-service/pkgs/container/helm-service) |
+|:-------------:|:------------------------------------------------------------------------------------------------------:|
+|    0.17.0     |                               keptn-contrib/helm-service:1.0.0                                         |
+
+
 ## Installation
 
 The *helm-service* is part of the *Execution Plane for Continuous Delivery*.

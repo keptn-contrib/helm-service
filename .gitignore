@@ -4,8 +4,6 @@
 *.dll
 *.so
 *.dylib
-
-helm-service
 MANIFEST
 
 # Test binary, build with `go test -c`
@@ -17,6 +15,6 @@ MANIFEST
 vendor/*
 .DS_Store
 
-#binary - go build
+# Build charts
 helm-service
-
+helm-service*.tgz

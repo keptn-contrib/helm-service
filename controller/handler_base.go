@@ -9,12 +9,12 @@ import (
 	cloudevents "github.com/cloudevents/sdk-go/v2"
 	cloudtypes "github.com/cloudevents/sdk-go/v2/types"
 	"github.com/ghodss/yaml"
+	"github.com/keptn-contrib/helm-service/pkg/common"
+	"github.com/keptn-contrib/helm-service/pkg/helm"
+	"github.com/keptn-contrib/helm-service/pkg/types"
 	keptnapi "github.com/keptn/go-utils/pkg/api/utils"
 	keptnevents "github.com/keptn/go-utils/pkg/lib"
 	keptnv2 "github.com/keptn/go-utils/pkg/lib/v0_2_0"
-	"github.com/keptn/keptn/helm-service/pkg/common"
-	"github.com/keptn/keptn/helm-service/pkg/helm"
-	"github.com/keptn/keptn/helm-service/pkg/types"
 	"helm.sh/helm/v3/pkg/chart"
 )
 

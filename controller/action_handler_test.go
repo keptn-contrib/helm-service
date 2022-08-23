@@ -1,12 +1,13 @@
 package controller
 
 import (
+	"testing"
+
 	cloudevents "github.com/cloudevents/sdk-go/v2"
 	"github.com/golang/mock/gomock"
+	"github.com/keptn-contrib/helm-service/mocks"
 	keptnv2 "github.com/keptn/go-utils/pkg/lib/v0_2_0"
-	"github.com/keptn/keptn/helm-service/mocks"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func TestCreateActionHandler(t *testing.T) {
