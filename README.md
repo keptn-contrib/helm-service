@@ -12,10 +12,11 @@ either promotes or rolls back the new version depending on the (evaluation) resu
 
 ## Compatibility Matrix
 
-| Keptn Version | [Helm-service Docker Image](https://github.com/keptn-contrib/helm-service/pkgs/container/helm-service) |
-|:-------------:|:------------------------------------------------------------------------------------------------------:|
-|    0.17.0     |                               keptn-contrib/helm-service:1.0.0                                         |
+|      Keptn Version    | [Helm-service Docker Image](https://github.com/keptn-contrib/helm-service/pkgs/container/helm-service) |
+|:---------------------:|:------------------------------------------------------------------------------------------------------:|
+|    0.17.0 - 0.18.x    |                               keptn-contrib/helm-service:0.18.0                                        |
 
+Newer Keptn versions might be compatible, but compatibility has not been verified at the time of the release.
 
 ## Installation
 
