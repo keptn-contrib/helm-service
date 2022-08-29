@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.18.1](https://github.com/keptn-contrib/helm-service/compare/0.18.0...0.18.1) (2022-08-29)
+
+
+### Bug Fixes
+
+* Use distributor 0.18.0 for Keptn 0.18.0 compatibility ([#7](https://github.com/keptn-contrib/helm-service/issues/7)) ([503d503](https://github.com/keptn-contrib/helm-service/commit/503d503afd4d03569e1b2ed573a6b6841f9da420))
+
+
+### Other
+
+* Fix compatibility matirx ([#5](https://github.com/keptn-contrib/helm-service/issues/5)) ([49e02e2](https://github.com/keptn-contrib/helm-service/commit/49e02e29febe43b11792b9409288c7382a5d18df))
+
 ## [0.18.0](https://github.com/keptn-contrib/helm-service/compare/0.17.0...0.18.0) (2022-08-24)
 
 
