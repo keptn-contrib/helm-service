@@ -34,7 +34,7 @@ Replace `<latest>` with a Keptn version available from the [release list](https:
 
 ## Installation on multiple remote execution planes
 
-To avoid naming conflicts in a setup with multiple remote execution planes, consider providing a unique name for the service with the `nameOverride` parameter that can be found [here](./chart/README.md).
+To avoid naming conflicts and resulting errors in a setup with multiple remote execution planes, please provide a unique name per helm-service using the `nameOverride` parameter that can be found in the [helm values](./chart/README.md).
 
 ## Development
 
