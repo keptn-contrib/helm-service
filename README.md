@@ -32,6 +32,10 @@ helm install helm-service https://github.com/keptn/keptn/releases/download/<late
 
 Replace `<latest>` with a Keptn version available from the [release list](https://github.com/keptn/keptn/tags).
 
+## Installation on multiple remote execution planes
+
+To avoid naming conflicts and resulting errors in a setup with multiple remote execution planes, please provide a unique name per helm-service using the `nameOverride` parameter that can be found in the [helm values](./chart/README.md).
+
 ## Development
 
 You can use `skaffold run --tail` to build and deploy from this directory.

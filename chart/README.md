@@ -9,7 +9,7 @@ The following table lists the configurable parameters of the Helm-service chart 
 
 | Parameter                               | Description                                                       | Default                                         |
 |-----------------------------------------|-------------------------------------------------------------------|-------------------------------------------------|
-| `nameOverride`                          | Override the name label and distributor subscription name         | `""`                                            |
+| `nameOverride`                          | Override the name label and distributor subscription name. <br />This option should be used to provide a unique name per helm service in a multi remote execution plane setup.        | `""`                                            |
 | `helmservice.image.registry`            | Container image name                                              | `"${global.keptn.image.registry}/helm-service"` |
 | `helmservice.image.pullPolicy`          | Kubernetes image pull policy                                      | `"IfNotPresent"`                                |
 | `helmservice.image.tag`                 | Container tag                                                     | `global.keptn.image.tag`                        |
