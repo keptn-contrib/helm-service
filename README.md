@@ -23,6 +23,9 @@ either promotes or rolls back the new version depending on the (evaluation) resu
 |:----------------:|:------------------------------------------------------------------------------------------------------:|
 | 0.17.0 and older |                          Please use https://github.com/keptn/keptn/releases                            |
 |      0.18.0      |                                   keptn-contrib/helm-service:0.18.1                                    |
+|      0.19.x      |                                   keptn-contrib/helm-service:0.18.1                                    |
+|      0.20.x      |                                   keptn-contrib/helm-service:0.18.1                                    |
+|      1.x.y       |                                   keptn-contrib/helm-service:0.18.1                                    |
 
 
 Newer Keptn versions might be compatible, but compatibility has not been verified at the time of the release.
